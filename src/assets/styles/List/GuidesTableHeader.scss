@@ -1,0 +1,24 @@
+@use "../shared.scss" as *;
+
+.list__table-header {
+    
+    .list__table-header-row {
+        border: 1px solid black;
+
+        .list__table-header-row--title {
+            color: $colorNoche;
+            font-size: 1rem;
+            padding: 0 2.5rem;
+
+            /*Diseño para tablets*/
+            @include tablet {
+                padding: 0 1rem;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                padding: 5px 2px;
+                font-size: .7rem;
+            }
+        }
+    }
+}

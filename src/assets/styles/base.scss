@@ -1,0 +1,26 @@
+@mixin colorBase {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+@mixin fontNoche {
+    color: #091E3F;
+    font-weight: 700;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: .5rem 0;
+    text-decoration: none;
+}
+
+@mixin fontClaro {
+    color: #6AC6DE;
+    font-weight: 600;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    margin: .5rem 0;
+    text-decoration: none;
+}
+@mixin tablet {
+    @media screen and (max-width: 60rem) {@content};
+}
+@mixin phone {
+    @media screen and (max-width: 48rem) {@content};
+}

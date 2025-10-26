@@ -1,0 +1,43 @@
+@use "../../styles/shared.scss" as *;
+
+.status__transito {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row-reverse;
+    justify-content: right;
+    gap: 10px;
+    margin-bottom: 3rem;
+    align-items: center;
+
+    .status__logo {
+        width: 30%;
+
+        .status__logo-img {
+            width: 100%;
+        }
+    }
+
+    .status__transito-info {
+        width: 100%;
+
+        .status__transito-title {
+            color: $colorNoche;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-align: center;
+        }
+        .status__transito-number {
+            font-size: 2rem;
+            color: #1d3557;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+        .status__transito-descripcion {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@use "../../assets/styles/shared" as *;
+
+.main {
+    .slogan {
+
+        .slogan__title {
+            background-color: $coloClaro;
+            text-align: center;
+            text-shadow: 1px 1px 1px #000000;
+            font-size: 3em;
+            margin: 15px 15px;
+            border-radius: 10px;
+        }
+        @include tablet {
+            font-size: .6em;
+        }
+        @include phone {
+            font-size: .3em;
+        }
+    }
+
+    .page {
+
+        .page__title {
+            background: url(https://blog.qupos.com/hs-fs/hubfs/mejorar-logistica-erp-2.png?width=1600&name=mejorar-logistica-erp-2.png);
+            background-size: 100%;
+            background-position: center;
+            background-position-y: 31%;
+            background-repeat: no-repeat;
+            margin: 0;
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            justify-content: center;
+            font-size: 3em;
+             @include fontNoche;
+
+            .page__title-hypertext {
+                background-color: $colorNoche;
+                color: $colorBase;
+                border-radius: 40px;
+                padding: 7px 7px;
+            }
+
+             /*Diseño para tablets*/
+             @include tablet {
+                padding: 0;
+                font-size: 2.5em;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                padding: 0;
+                font-size: 1em;
+            }
+        }
+    }
+}

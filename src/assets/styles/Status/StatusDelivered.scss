@@ -1,0 +1,44 @@
+@use "../../styles/shared.scss" as *;
+
+.status__entregadas {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: left;
+    gap: 10px;
+    margin-bottom: 3rem;
+    align-items: center;
+
+    .status__logo {
+        width: 26%;
+
+        .status__logo-img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    .status__entregadas-info {
+        width: 100%;
+
+        .status__entregadas-title {
+            color: $colorNoche;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            text-align: center;
+        }
+        .status__entregadas-number {
+            font-size: 2rem;
+            color: #1d3557;
+            font-weight: bold;
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+        .status__entregadas-descripcion {
+            font-size: 1rem;
+            color: #555;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@use "../shared.scss" as *;
+
+.list__data {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    .list__info {
+        width: 70%;
+
+        .list__info-title {
+            color: $colorNoche;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0;
+
+            /*Diseño para tablets*/
+            @include tablet {
+                font-size: 1.2rem;
+            }
+        }
+        .list__info-text {
+            color: $colorNoche;
+            font-size: 1rem;
+            font-weight: 500;
+
+            /*Diseño para tablets*/
+            @include tablet {
+                font-size: .9rem;
+            }
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            width: 60%;
+        }
+    }
+
+    /*Diseño para telefonos*/
+    @include phone {
+        gap: 10px;
+    }
+}

@@ -1,0 +1,70 @@
+@use "../../assets/styles/shared" as *;
+
+.header__nav {
+    display: flex;
+    position: fixed;
+    right: 0;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 70%;
+    background-color: $colorNoche;
+    padding: 30px 0;
+    border-radius: 40px;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform .25s ease, opacity .2s ease;
+
+    &.is-open {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .header__nav-link {
+        @include colorBase;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        gap: 4px;
+
+        /*Diseño para tablets*/
+        @include tablet {
+            display: flex;
+            justify-content: center;
+        }
+
+        &:hover {
+            background-color: $coloClaro;
+            transition: transform .3s ease-in-out ;
+            border-radius: 10px;
+            transform: scale(1.1);
+            padding: 1px 1px;
+        }
+    }
+
+    /*Diseño para tablets*/
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 10px;
+        width: 30%;
+        padding: 5px 5px;
+        right: 0;
+        position: relative;
+    }
+
+    /*Diseño para telefonos*/
+    @include phone {
+        width: 100%;
+        display: flex;
+        position: relative;
+        gap: 5px;
+        right: 0;
+        position: relative;
+    }
+
+
+
+}

@@ -1,0 +1,22 @@
+@use "../../styles/shared.scss" as *;
+
+.form__general {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+
+    /*Diseño para tablets*/
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    /*Diseño para telefonos*/
+    @include phone {
+        display: flex;
+        flex-direction: column;
+    }
+}

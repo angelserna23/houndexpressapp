@@ -1,0 +1,15 @@
+@import "./base.scss";
+@import "./components.scss";
+@import "./variables.scss";
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3, h4, p, a, li {
+    color: $colorNoche;
+    font-weight: 700;
+    font-family: $fontFamily;
+    margin: .5rem 0;
+    text-decoration: none;
+}

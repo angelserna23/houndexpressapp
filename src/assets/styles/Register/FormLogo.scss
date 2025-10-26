@@ -1,0 +1,15 @@
+@use "../../styles/shared.scss" as *;
+
+.form__logo {
+    display: flex;
+    justify-content: center;
+
+    .form__logo-img {
+        width: 100%;
+
+        /*Diseño para telefonos*/
+        @include phone {
+            width: 0;
+        }
+    }
+}

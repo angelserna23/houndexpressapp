@@ -1,0 +1,125 @@
+@use "../../styles/shared.scss" as *;
+
+.form {
+    border: 2px solid black;
+    padding: 1rem 1rem;
+    background-color: $coloClaro;
+    border-radius: 20px;
+    width: 20%;
+
+    .form__label {
+        color: #000000;
+        display: block;
+        @include fontNoche;
+        margin-bottom: .5rem;
+        font-size: 1rem;
+    }
+
+    .form__input {
+        border: none;
+        border-bottom: 1px solid #000000;
+        width: 100%;
+        background-color: transparent;
+        font-size: 1rem;
+        color: $colorBase;
+        outline: none;
+    }
+
+    .form__guia {
+        margin-bottom: 2rem;
+        display: flex;
+
+        .form__label {
+            font-size: 1rem;
+            width: 100%;
+            margin: 0;
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            display: block;
+        }
+    }
+    .form__origen {
+        margin-bottom: 2rem;
+    }
+    .form__destino {
+        margin-bottom: 2rem;
+    }
+    .form__fecha {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+
+        .form__date {
+            border-radius: 30px;
+            border: 2px solid $colorNoche;
+            padding: 5px 10px;
+            font-family: $fontFamily;
+            background-color: $colorBase;
+        }
+        /*Diseño para tablets*/
+        @include tablet {
+            display: block;
+        }
+    }
+    .form__estado {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+
+        .form__select-status {
+            border: 2px solid $colorNoche;
+            border-radius: 30px;
+            padding: 5px 5px;
+            background-color: $colorBase;
+            text-align: center;
+            font-family: $fontFamily;
+            font-weight: 600;
+        }
+        /*Diseño para tablets*/
+        @include tablet {
+            display: block;
+        }
+
+    }
+    .form__button {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        .form__send {
+            color: $colorNoche;
+            font-size: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            padding: 0 1rem;
+            cursor: pointer;
+
+            &:hover {
+                color: $colorBase;
+                background-color: $colorNoche;
+                transition: all .25s linear ;
+                transform: scale(1.1);
+            }
+        }
+    }
+
+/*Diseño para tablets*/
+@include tablet {
+    width: 26%;
+    margin-left: 1rem;
+}
+
+/*Diseño para telefonos*/
+@include phone {
+    width: 50%;
+    margin: 0;
+}
+
+}

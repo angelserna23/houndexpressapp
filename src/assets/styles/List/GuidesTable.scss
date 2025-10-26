@@ -1,0 +1,60 @@
+@use "../shared.scss" as *;
+
+.list__tb {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow-x: auto;
+
+    .list__table {
+        border-collapse: collapse; /*Esta linea nos permite colocar bordes en diferentes partes de tablas*/
+        width: 100%;
+
+        /*Diseño para tablets*/
+        @include tablet {
+            //Fecha de ultima modificacion
+            th:nth-child(5),
+            td:nth-child(5) {
+                display: none;
+            }
+            th:nth-child(4),
+            td:nth-child(4) {
+                display: none;
+            }
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            //Fecha de ultima modificacion
+            th:nth-child(5),
+            td:nth-child(5) {
+                display: none;
+            }
+            //Fecha de creacion
+            th:nth-child(4),
+            td:nth-child(4) {
+                display: none;
+            }
+
+            //Origen
+            th:nth-child(3),
+            td:nth-child(3) {
+                display: none;
+            }
+        }
+    } 
+    
+    /*Diseño para telefonos*/
+    @include phone {
+        display: flex;
+        justify-content: space-between;
+        overflow-x: auto;
+    }  
+    
+    /*Diseño para tablets*/
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}

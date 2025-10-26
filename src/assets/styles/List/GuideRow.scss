@@ -1,0 +1,63 @@
+@use "../shared.scss" as *;
+
+.list__table-body-row {
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+
+    .list__table-body-row-info {
+        color: $colorNoche;
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #000000; 
+
+        /*Diseño para telefonos*/
+        @include phone {
+            padding: 5px 2px;
+            font-size: .7rem;
+        }
+    }
+    .historial {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        align-items: center;
+        cursor: pointer;
+
+        .historial__img {
+            transition: transform 0.4s ease;
+
+            &.rotate {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .list__table-body-row-info--button {
+        padding: .2rem 1.2rem;
+        background-color: $colorNoche;
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 20px;
+
+        &:hover {
+            background-color: #baf1ff;
+            color: #000000;
+
+            transition: all .2s ease-in;
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            padding: 0 .5rem;
+            font-size: .9rem;
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            padding: 0 .5rem;
+            font-size: .6rem;
+        }
+    }
+}

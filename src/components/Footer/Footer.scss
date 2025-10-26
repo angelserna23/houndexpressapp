@@ -1,0 +1,490 @@
+@use "../../assets/styles/shared" as *;
+
+.footer {
+
+    .info {
+        display: flex;
+        box-sizing: border-box;
+        justify-content: center;
+        background-color: $colorNoche;
+        gap: 30px;
+    
+        .info__form {
+            background-color: #71b8cb;;
+            box-sizing: border-box;
+            padding: 3rem 3rem;
+            margin-top: .5rem;
+            border-radius: 10px;
+
+            .info__nombre {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
+                }
+            }
+            .info__email {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
+                }
+            }
+            .info__contacto {
+                width: 100%;
+                margin-bottom: 20px;
+                
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
+                }
+            }
+            .info__mensaje {
+                width: 100%;
+                margin-bottom: 20px;
+
+                .info__form-label {
+                    @include colorBase;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                }
+                .info__form-input {
+                    border: none;
+                    border-bottom: 1px solid rgb(255, 255, 255);
+                    background-color: transparent;
+                    width: 100%;
+                    color: $colorNoche;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    outline: none;
+                }
+
+            }
+            .info__checkbox {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .info__form-label {
+                    @include colorBase;
+                }
+                .info__form-checkbox {
+                    height: 25px;
+                    width: 25px;
+                    margin: 0;
+                    cursor: pointer;
+                }
+
+                .info__checkbox-send {
+                    margin: 1.5rem;
+
+                    .info__checkbox-button {
+                        font-size: 1.5em;
+                        background-color: $colorNoche;
+                        color: $colorBase;
+                        border: 1px solid $colorNoche;
+                        padding: 4px 7px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        
+                        &.select {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                padding: 1rem 1rem;
+                margin: 1rem 1rem;
+                border-radius: 10px;
+            }
+        }
+
+        .mensaje {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items:flex-start;
+            justify-content: center;
+    
+            .mensaje__text {
+                @include colorBase;
+                font-size: 1.2em;
+    
+                .mensaje__text-stay {
+                    font-size: 1.7em;
+                    font-weight: 700;
+
+                    /*Diseño para tablets*/
+                    @include tablet {
+                        font-size: 1.2em;
+                    }
+                }
+                .mensaje__text-distance {
+                    color: #6AC6DE;
+                    font-size: 1.7em;
+                    font-weight: 700;
+
+                    /*Diseño para tablets*/
+                    @include tablet {
+                        font-size: 1.2em;
+                    }
+                }
+
+                /*Diseño para tablets*/
+                @include tablet {
+                    font-size: 1em;
+                }
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    width: 100%;
+                }
+            }
+
+            /*Diseño para telefonos*/
+            @include phone {
+                display: flex;
+                box-sizing: border-box;
+                width: auto;
+                margin: 1rem 1rem;
+                text-align: center;
+            }
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+    .separacion {
+        background-color: $colorNoche;
+        @include fontNoche;
+        margin: 0;
+        padding: 3rem 0;
+
+        /*Diseño para tablets*/
+        @include tablet {
+            padding: 1rem 0;
+        }
+    }
+    .socialMedia {
+        background-color: $colorNoche;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: auto;
+        padding-bottom: 5rem;
+
+        .socialMedia__redes {
+            width: 25%;
+
+            .socialMedia__logo {
+                width: 100%;
+            }
+
+            .redes {
+                display: flex;
+                justify-content: right;
+                gap: 10px;
+                margin-right: 3rem;
+
+                .redes__logo-img {
+
+                    &:hover {
+                        transition: transform .1s ease-in-out ;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .socialMedia__text {
+                display: flex;
+                align-items: center;
+                color: $colorBlanco;
+                font-weight: 400;
+
+                @include phone {
+                    margin: 0 1rem;
+                    margin-top: 1rem;
+                }
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                width: 30%;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                width: 100%;
+            }
+        }
+        .socialMedia__interfaz {
+            width: 15%;
+
+            .socialMedia__interfaz-text {
+                font-size: 2em;
+                font-weight: 700;
+
+                .socialMedia__interfaz-text-highlight {
+                    color: $coloClaro;
+                }
+            }
+
+            .socialMedia__nav {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                .socialMedia__nav-link {
+                    @include colorBase;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover {
+                        color: $coloClaro;
+                        transition: transform .2s ease;
+                        font-size: 1.1em;
+                    }
+                }
+
+                .socialMedia__nav-text {
+                    @include colorBase;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    margin: 0;
+
+                    &:hover {
+                        color: $coloClaro;
+                        transition: transform .2s ease;
+                        font-size: 1.1em;
+                    }
+                }
+
+            }
+
+            .socialMedia__nav-services {
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                padding-left: 1.2rem;
+                position: fixed;
+
+                &.services {
+                    position: relative;
+                    opacity: 1;
+                    max-height: 500px;
+                }
+
+                .socialMedia__nav-link-services {
+                    @include colorBase;
+                    display: flex;
+                    align-items: center;
+                    padding: .2rem 0;
+                    padding-left: .6rem;
+                    font-size: .9rem;
+
+                    &:hover {
+                        color: $coloClaro;
+                        transition: transform .2s ease;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                width: 20%;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .socialMedia__contacto {
+            width: 25%;
+
+            .socialMedia__contacto-text {
+                font-size: 2em;
+                font-weight: 700;
+            }
+
+            .socialMedia__horario {
+                display: flex;
+                gap: 10px;
+                align-items:center;
+
+                .socialMedia__horario-text {
+                    color: $colorBlanco;
+                    font-weight: 300;
+                    margin: 0;
+                    font-weight: 600;
+                }
+            }
+
+            .socialMedia__contacto-mx {
+                @include colorBase;
+                font-weight: 600;
+                font-size: 1.2em;
+                margin-bottom: 0;
+            }
+
+            .socialMedia__telefono {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 1rem 0;
+
+                .socialMedia__telefono-text {
+                    color: $colorBlanco;
+                    font-weight: 300;
+                    margin: 0;
+                }
+
+            }
+
+            .socialMedia__correo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 1rem 0;
+
+                .socialMedia__correo-text {
+                    color: $colorBlanco;
+                    font-weight: 300;
+                }
+            }
+
+            .socialMedia__contacto-eua {
+                @include colorBase;
+                font-weight: 600;
+                font-size: 1.2em;
+                margin-bottom: 0;
+            }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                width: 30%;
+            }
+            /*Diseño para telefonos*/
+            @include phone {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .seguridad {
+        background-color: $coloClaro;
+
+        .seguridad__nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .seguridad__nav-link {
+                @include colorBase;
+                font-weight: 600;
+    
+                /*Diseño para tablets*/
+                @include tablet {
+                    margin: 0;
+                    padding-bottom: 1rem;
+                    text-align: center;
+                }
+    
+                /*Diseño para telefonos*/
+                @include phone {
+                    margin: 0;
+                    padding-bottom: 1rem;
+                    text-align: center;
+                }
+
+                /*Diseño para tablets*/
+                @include tablet {
+                    display: block;
+                }
+
+                /*Diseño para telefonos*/
+                @include phone {
+                    display: block;
+                }
+             }
+
+            /*Diseño para tablets*/
+            @include tablet {
+                display: block;
+            }
+
+            /*Diseño para telefonos*/
+            @include phone {
+                display: block;
+            }
+        }
+    }
+}

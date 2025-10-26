@@ -1,0 +1,25 @@
+@use "../../styles/shared.scss" as *;
+
+.data {
+    display: flex;
+    justify-content: center;
+
+    .data__info {
+
+        padding-right: 15rem;
+
+        .data-title {
+            color: $colorNoche;
+        }
+        .data-text {
+            color: $colorNoche;
+        }
+
+        /*Diseño para telefonos*/
+        @include phone {
+            padding-right: 0;
+            
+        }
+    }
+    
+}

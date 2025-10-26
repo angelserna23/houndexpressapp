@@ -1,0 +1,17 @@
+@use "../../styles/shared.scss" as *;
+
+.status {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: 1rem 23rem;
+    
+    /*Diseño para tablets*/
+    @include tablet {
+        margin: 1rem 7rem;
+    }
+    /*Diseño para telefonos*/
+    @include phone {
+        margin: 1rem 1rem;
+    }
+}

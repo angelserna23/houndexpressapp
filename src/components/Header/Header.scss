@@ -1,0 +1,59 @@
+@use "../../assets/styles/shared" as *;
+
+.header {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 15px;
+
+    .header__img {
+        width: 20%;
+
+        /*Diseño para tablets*/
+        @include tablet {
+            width: 50%;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            width: 80%;
+        }
+    }
+
+    .header__img-menu {
+        position: relative;
+        cursor: pointer;
+        margin-right: 2rem;
+        box-sizing: border-box;
+        width: 2vw;
+
+        &:hover {
+            border-radius: 50%;
+            transition: all .4s ease-in;
+            background-color: #f3f3f3;
+        }
+
+        /*Diseño para tablets*/
+        @include tablet {
+            width: 0;
+        }
+        /*Diseño para telefonos*/
+        @include phone {
+            width: 0;
+        }
+    }
+
+    /*Diseño para tablets*/
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+        margin: 4rem 15px;
+    }
+    /*Diseño para telefonos*/
+    @include phone {
+        display: flex;
+        margin: 0;
+        flex-direction: column;
+        position: relative;
+    }
+}
