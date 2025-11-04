@@ -48,13 +48,13 @@ const Footer = () => {
             <p className="separacion"></p>
             <article className="socialMedia">
                 <section className="socialMedia__redes">
-                    <img className="socialMedia__logo" src={LogoClaro}/>
+                    <img className="socialMedia__logo" src={LogoClaro} alt="Logo Claro"/>
                     <div className="redes">
-                        <a href="https://www.linkedin.com" target="_blank"><img className="redes__logo-img" src={LinkedInIcon} alt="" /></a>
-                        <a href="https://www.facebook.com" target="_blank"><img className="redes__logo-img" src={FacebookIcon} alt=""/></a>
-                        <a href="https://www.instagram.com" target="_blank"><img className="redes__logo-img" src={InstagramIcon} alt=""/></a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><img className="redes__logo-img" src={LinkedInIcon} alt="" /></a>
+                        <a href="https://www.facebook.com" target="_blank" rel="noreferrer"><img className="redes__logo-img" src={FacebookIcon} alt=""/></a>
+                        <a href="https://www.instagram.com" target="_blank" rel="noreferrer"><img className="redes__logo-img" src={InstagramIcon} alt=""/></a>
                     </div>
-                    <p className="socialMedia__text">Idioma <img src={ArrowDownIcon}/></p>
+                    <p className="socialMedia__text">Idioma <img src={ArrowDownIcon} alt="ArrowDownIcon"/></p>
                     <p className="socialMedia__text">
                         Somos un equipo de expertos en logística, tecnología y comercio internacional. 
                         Te queremos ayudar a llevar tu empresa al siguiente nivel con soluciones de 
@@ -64,20 +64,20 @@ const Footer = () => {
                 <section className="socialMedia__intefaz">
                     <p className="socialMedia__interfaz-text"><span className="socialMedia__interfaz-text-highlight">Somos</span> <br/> Hound Express</p>
                     <nav>
-                        <a className="socialMedia__nav-link" href="">Inicio</a>
-                        <a className="socialMedia__nav-link" href="">Nostros</a>
+                        <a className="socialMedia__nav-link" href="#">Inicio</a>
+                        <a className="socialMedia__nav-link" href="#">Nostros</a>
                         <p className="socialMedia__nav-text">Servicios</p>
                         <div>
-                            <a className="socialMedia__nav-link" href="">E-commerce</a>
-                            <a className="socialMedia__nav-link" href="">Cargo</a>
-                            <a className="socialMedia__nav-link" href="">Custom</a>
-                            <a className="socialMedia__nav-link" href="">Parcel</a>
+                            <a className="socialMedia__nav-link" href="#">E-commerce</a>
+                            <a className="socialMedia__nav-link" href="#">Cargo</a>
+                            <a className="socialMedia__nav-link" href="#">Custom</a>
+                            <a className="socialMedia__nav-link" href="#">Parcel</a>
                         </div>
-                        <a className="socialMedia__nav-link" href="">Preguntas</a>
-                        <a className="socialMedia__nav-link" href="">Rastrear paquete</a>
-                        <a className="socialMedia__nav-link" href="">Noticias</a>
-                        <a className="socialMedia__nav-link" href="">Blog</a>
-                        <a className="socialMedia__nav-link" href="">Contacto</a>
+                        <a className="socialMedia__nav-link" href="#">Preguntas</a>
+                        <a className="socialMedia__nav-link" href="#">Rastrear paquete</a>
+                        <a className="socialMedia__nav-link" href="#">Noticias</a>
+                        <a className="socialMedia__nav-link" href="#">Blog</a>
+                        <a className="socialMedia__nav-link" href="#">Contacto</a>
                     </nav>
                 </section>
                 <section className="socialMedia__contacto">
@@ -108,9 +108,9 @@ const Footer = () => {
             </article>
             <article className="seguridad">
                 <nav className="seguridad__nav">
-                    <a className="seguridad__nav-link" href="">Copyright © 2025 Hound Express. Todos los derechos reservados.</a>
-                    <a className="seguridad__nav-link" href="">Términos y condiciones</a>
-                    <a className="seguridad__nav-link" href="">Política de privacidad</a>
+                    <a className="seguridad__nav-link" href="#">Copyright © 2025 Hound Express. Todos los derechos reservados.</a>
+                    <a className="seguridad__nav-link" href="#">Términos y condiciones</a>
+                    <a className="seguridad__nav-link" href="#">Política de privacidad</a>
                 </nav>
             </article>
         </footer>

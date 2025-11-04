@@ -40,7 +40,7 @@ const Home = () => {
                         <source className="video__media-asset" type="video/mp4" src={HoundVideo}/>
                     </video>
                     <p className="video__text">"Rastrea. Controla. Recibe. ¡Sin sorpresas!"</p>
-                    <img className="video__img" src={WorldGif}/>
+                    <img className="video__img" src={WorldGif} alt="WorldGif"/>
                 </section>
             </article>
             <article className="valores">

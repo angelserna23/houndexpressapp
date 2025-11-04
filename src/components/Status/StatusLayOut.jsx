@@ -1,49 +1,34 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useSelector } from "react-redux";
 import StatusPending from "./StatusCategory/StatusPending";
 import StatusTranzit from "./StatusCategory/StatusTranzit";
 import StatusDelivered from "./StatusCategory/StatusDelivered";
 import "../../assets/styles/Status/StatusLayOut.scss";
 
 const StatusLayOut = () => {
+  const guides = useSelector((state) => state.guides);
 
-    const [stats, setStats] = useState({
-        pendientes: 0,
-        transito: 0,
-        entregadas: 0,
-    });
-    useEffect(() => {
-        const guides= JSON.parse(localStorage.getItem("guides")) || [];
-        let pendientes = 0;
-        let transito = 0;
-        let entregadas = 0;
+  const { pendientes, transito, entregadas } = React.useMemo(() => {
+    let p = 0, t = 0, e = 0;
 
-        guides.forEach((guide) => {
-            const lastStatus = guide.history[guide.history.length - 1].status;
+    for (const g of guides || []) {
+      const last = g.history?.[g.history.length - 1];
+      const st = last?.status || g.status;
 
-            if(lastStatus === "pendiente") {
-                pendientes++;
-            } else if (lastStatus === "transito") {
-                transito++;
-            } else if (lastStatus === "entregado") {
-                entregadas++;
-            }
-        });
+      if (st === "pendiente") p++;
+      else if (st === "transito") t++;
+      else if (st === "entregado") e++;
+    }
+    return { pendientes: p, transito: t, entregadas: e };
+  }, [guides]);
 
-        setStats({
-            pendientes,
-            transito,
-            entregadas,
-        });
-    }, []);
-
-
-    return (
-        <article className="status">
-            <StatusPending count={stats.pendientes} />
-            <StatusTranzit count={stats.transito}/>
-            <StatusDelivered count={stats.entregadas}/>
-        </article>
-    )
-}
+  return (
+    <article className="status">
+      <StatusPending count={pendientes} />
+      <StatusTranzit count={transito} />
+      <StatusDelivered count={entregadas} />
+    </article>
+  );
+};
 
 export default StatusLayOut;

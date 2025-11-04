@@ -1,80 +1,58 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useMemo } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import GuidesTableHeader from "./GuidesTableHeader";
 import GuidesTableBody from "./GuidesTableBody";
+import { updateGuideStatus } from "../../../store/guidesSlice";
 import "../../../assets/styles/List/GuidesTable.scss";
 
 const GuidesTable = () => {
-    const [guides, setGuides] = useState([]);
-    const [expanded, setExpanded] = useState([]);
+  const dispatch = useDispatch();
 
-    //Aqui cargamos las guias al momento de que se cargue la pagina
-    useEffect(() => {
-        const stored = JSON.parse(localStorage.getItem("guides")) || [];
-        setGuides(stored);
-    }, []);
+  const guides = useSelector((state) => state.guides);
 
-    //Que cambie el historial de despliegue
-    const toggleHistory = (guideNumber) => {
-        setExpanded((prev) => {
-            if(prev.includes(guideNumber)) {
-                return prev.filter((num) => num !== guideNumber)
-            }
-            return [...prev, guideNumber]
-        })
-    }
+  const [expanded, setExpanded] = useState([]);
 
-    //Actualizacion de la guia de acuerdo a los 3 estados que tenemos
-    const handleUpdateGuide = (guideNumber) => {
-        setGuides((prevGuides) => {
-            const updatedGuides = prevGuides.map((g) => {
-                if (g.number !== guideNumber) return g; 
-
-                const newGuide = {...g };
-
-                const lastHistory = newGuide.history[newGuide.history.length - 1];
-                const currentStatus = lastHistory.status;
-
-                const estados = ["pendiente", "transito", "entregado"];
-                const currentIndex = estados.indexOf(currentStatus);
-
-                const nextStatus =
-                    currentIndex < estados.length - 1
-                        ? estados[currentIndex + 1]
-                        : estados[currentIndex];
-                
-                if(nextStatus === currentStatus) {
-                    return newGuide
-                }
-
-                const newEntry = {
-                    date: new Date().toLocaleString(),
-                    status: nextStatus
-                }
-
-                newGuide.history = [...newGuide.history, newEntry];
-
-                return newGuide;
-            });
-
-            localStorage.setItem("guides", JSON.stringify(updatedGuides))
-
-            return updatedGuides;
-        })
-    }
-
-    return(
-        <div className="list__tb">
-            <table className="list__table">
-                <GuidesTableHeader />
-                <GuidesTableBody
-                    guides={guides} 
-                    expanded={expanded}
-                    toggleHistory={toggleHistory}
-                    onUpdateGuide={handleUpdateGuide}
-                />
-            </table>
-        </div>
+  const toggleHistory = (guideNumber) => {
+    setExpanded((prev) =>
+      prev.includes(guideNumber)
+        ? prev.filter((n) => n !== guideNumber)
+        : [...prev, guideNumber]
     );
-}
+  };
+
+  const getNextStatus = (current) => {
+    const estados = ["pendiente", "transito", "entregado"];
+    const idx = estados.indexOf(current);
+    if (idx === -1) return "pendiente";
+    return idx < estados.length - 1 ? estados[idx + 1] : estados[idx];
+  };
+
+  const handleUpdateGuide = (guideNumber) => {
+    const guide = guides.find((g) => g.number === guideNumber);
+    if (!guide || !guide.history?.length) return;
+
+    const last = guide.history[guide.history.length - 1];
+    const next = getNextStatus(last.status);
+    if (next !== last.status) {
+      dispatch(updateGuideStatus({ number: guideNumber, newStatus: next }));
+    }
+  };
+
+  const memoGuides = useMemo(() => guides, [guides]);
+
+  return (
+    <div className="list__tb">
+      <table className="list__table">
+        <GuidesTableHeader />
+        <GuidesTableBody
+          guides={memoGuides}
+          expanded={expanded}
+          toggleHistory={toggleHistory}
+          onUpdateGuide={handleUpdateGuide}
+        />
+      </table>
+    </div>
+  );
+};
 
 export default GuidesTable;

@@ -4,7 +4,7 @@ import GuideHistoryRow from "./GuideHistoryRow";
 import "../../../assets/styles/List/GuidesTableBody.scss";
 
 const GuidesTableBody = ({ guides, expanded, toggleHistory, onUpdateGuide }) => {
-  if (guides.length === 0) {
+  if (!guides || guides.length === 0) {
     return (
       <tbody className="list__table-body">
         <tr className="list__table-body-row">
@@ -28,15 +28,12 @@ const GuidesTableBody = ({ guides, expanded, toggleHistory, onUpdateGuide }) => 
               onToggle={() => toggleHistory(guide.number)}
               onUpdate={() => onUpdateGuide(guide.number)}
             />
-            {isExpanded && (
-              <GuideHistoryRow history={guide.history} />
-            )}
+            {isExpanded && <GuideHistoryRow history={guide.history} />}
           </React.Fragment>
         );
       })}
     </tbody>
   );
 };
-
 
 export default GuidesTableBody;

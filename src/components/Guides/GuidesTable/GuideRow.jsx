@@ -2,11 +2,10 @@ import React from "react";
 import ArrowDownBlack from "../../../assets/icons/arrow_down_black.svg";
 import "../../../assets/styles/List/GuideRow.scss";
 
-
 const GuideRow = ({ guide, isExpanded, onToggle, onUpdate }) => {
   const lastHistory = guide.history[guide.history.length - 1];
-  const lastStatus = lastHistory.status;
-  const lastDate = lastHistory.date;
+  const lastStatus = lastHistory?.status || guide.status;
+  const lastDate = lastHistory?.date || guide.date;
 
   return (
     <tr className="list__table-body-row">
@@ -17,19 +16,12 @@ const GuideRow = ({ guide, isExpanded, onToggle, onUpdate }) => {
       <td className="list__table-body-row-info">{lastDate}</td>
       <td className="list__table-body-row-info">{lastStatus}</td>
       <td className="list__table-body-row-info">
-        <button
-          className="list__table-body-row-info--button"
-          onClick={onUpdate}
-        >
+        <button className="list__table-body-row-info--button" onClick={onUpdate}>
           Actualizar
         </button>
       </td>
       <td className="list__table-body-row-info">
-        <span
-          className="historial"
-          onClick={onToggle}
-          style={{ cursor: "pointer" }}
-        >
+        <span className="historial" onClick={onToggle} style={{ cursor: "pointer" }}>
           {isExpanded ? "Ocultar" : "Desplegar"}
           <img
             className={`historial__img ${isExpanded ? "rotate" : ""}`}
