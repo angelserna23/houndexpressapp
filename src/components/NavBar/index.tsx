@@ -38,7 +38,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, onNavigate }) => {
       className={`header__nav ${isOpen ? "is-open" : ""}`}
       aria-label="Menú principal"
     >
-      <NavLink to="/" end className="header__nav-link" onClick={onNavigate}>
+      <NavLink to="/" end className="header__nav-link" aria-label="Inicio de pagina" onClick={onNavigate}>
         <img
           className="header__nav-link--img"
           src={headerStart}
@@ -48,7 +48,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, onNavigate }) => {
         Inicio
       </NavLink>
 
-      <NavLink to="/register" className="header__nav-link" onClick={onNavigate}>
+      <NavLink to="/register" className="header__nav-link" aria-label="Registro de una guia" onClick={onNavigate}>
         <img
           className="header__nav-link--img"
           src={headerDocsAdd}
@@ -58,7 +58,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, onNavigate }) => {
         Registro de Guías
       </NavLink>
 
-      <NavLink to="/status" className="header__nav-link" onClick={onNavigate}>
+      <NavLink to="/status" className="header__nav-link" aria-label="Estado general de las guias" onClick={onNavigate}>
         <img
           className="header__nav-link--img"
           src={headerSatelite}
@@ -68,7 +68,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, onNavigate }) => {
         Estado General
       </NavLink>
 
-      <NavLink to="/list" className="header__nav-link" onClick={onNavigate}>
+      <NavLink to="/list" className="header__nav-link" aria-label="Lista de guias" onClick={onNavigate}>
         <img
           className="header__nav-link--img"
           src={headerList}
@@ -78,7 +78,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, onNavigate }) => {
         Lista de Guías
       </NavLink>
 
-      <NavLink to="/search" className="header__nav-link" onClick={onNavigate}>
+      <NavLink to="/search" className="header__nav-link" aria-label="Buscar guias" onClick={onNavigate}>
         <img
           className="header__nav-link--img"
           src={headerSearch}
@@ -88,7 +88,7 @@ const NavBar: React.FC<NavBarProps> = ({ isOpen, onNavigate }) => {
         Buscar Guías
       </NavLink>
 
-      <NavLink to="/historical" className="header__nav-link" onClick={onNavigate}>
+      <NavLink to="/historical" className="header__nav-link" aria-label="Historial de guias" onClick={onNavigate}>
         <img
           className="header__nav-link--img"
           src={headerTimeLine}

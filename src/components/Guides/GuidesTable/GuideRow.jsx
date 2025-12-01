@@ -16,12 +16,10 @@ const GuideRow = ({ guide, isExpanded, onToggle, onUpdate }) => {
       <td className="list__table-body-row-info">{lastDate}</td>
       <td className="list__table-body-row-info">{lastStatus}</td>
       <td className="list__table-body-row-info">
-        <button className="list__table-body-row-info--button" onClick={onUpdate}>
-          Actualizar
-        </button>
+      <button className="list__table-body-row-info--button" aria-label="Actualizar estado" onClick={onUpdate}>Actualizar</button>
       </td>
       <td className="list__table-body-row-info">
-        <span className="historial" onClick={onToggle} style={{ cursor: "pointer" }}>
+        <span className="historial" aria-label="Despegar Historial" onClick={onToggle} style={{ cursor: "pointer" }}>
           {isExpanded ? "Ocultar" : "Desplegar"}
           <img
             className={`historial__img ${isExpanded ? "rotate" : ""}`}

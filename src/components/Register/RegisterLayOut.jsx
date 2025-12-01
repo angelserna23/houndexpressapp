@@ -52,10 +52,8 @@ const RegisterLayOut = () => {
       return;
     }
 
-    // 🔥 Guardar en Redux
     dispatch(addGuide(newGuide));
 
-    // Limpiar formulario
     setFormData({
       number: "",
       destinatary: "",

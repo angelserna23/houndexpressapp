@@ -9,11 +9,7 @@ const GuideHistoryRow = ({ history }) => {
           className="list__table-body-row-info-historial"
           style={{ listStyle: "none", padding: 0 }}
         >
-          {history.map((entry, idx) => (
-            <li key={idx} className="list__table-body-row-info-content">
-              {entry.date} - {entry.status}
-            </li>
-          ))}
+          {history.map((entry, idx) => (<li key={idx} className="list__table-body-row-info-content" aria-hidden="true">{entry.date} - {entry.status}</li>))}
         </ul>
       </td>
     </tr>

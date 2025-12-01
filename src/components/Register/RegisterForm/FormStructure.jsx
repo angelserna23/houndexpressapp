@@ -72,6 +72,7 @@ const FormStructure = ({ formData, onChange, onSubmit }) => {
                 </div>
                 <div className="form__button">
                     <button
+                        aria-label="Registro de Guia en el localStorage"
                         className="form__send"
                         type="submit"
                     >
