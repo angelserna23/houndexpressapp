@@ -1,4 +1,5 @@
 {
+  "homepage": "https://angelserna23.github.io/houndexpressapp",
   "name": "hound-express-app",
   "version": "0.1.0",
   "private": true,
@@ -21,7 +22,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +49,7 @@
     "@types/jest": "^30.0.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
+    "gh-pages": "^6.3.0",
     "typescript": "4.9.5"
   }
 }
