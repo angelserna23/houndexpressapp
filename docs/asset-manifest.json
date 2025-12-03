@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/houndexpressapp/static/css/main.fb96c8ed.css",
+    "main.js": "/houndexpressapp/static/js/main.77764eab.js",
+    "static/media/Hound-Express.mp4": "/houndexpressapp/static/media/Hound-Express.5e67a506d540f6a5cee9.mp4",
+    "static/media/vision.png": "/houndexpressapp/static/media/vision.c47980182816e29cb845.png",
+    "static/media/historia.png": "/houndexpressapp/static/media/historia.eeb81122b0ec90bd9f2b.png",
+    "static/media/mision.png": "/houndexpressapp/static/media/mision.4f4cc61405b614c94594.png",
+    "static/media/hound_estado_3.png": "/houndexpressapp/static/media/hound_estado_3.0b08967734a926e04636.png",
+    "static/media/fondo__hound.png": "/houndexpressapp/static/media/fondo__hound.9d8291ca66495dd3610b.png",
+    "static/media/world.gif": "/houndexpressapp/static/media/world.abfb63f5ecaac20869d6.gif",
+    "static/media/logo_claro.png": "/houndexpressapp/static/media/logo_claro.dfd0131e9b9d6e929bf2.png",
+    "static/media/logo.png": "/houndexpressapp/static/media/logo.3ed9e37efea17fdd8ba5.png",
+    "static/media/logo_register.png": "/houndexpressapp/static/media/logo_register.54f1b327e02b0d2790fc.png",
+    "static/media/hound_estado_2.png": "/houndexpressapp/static/media/hound_estado_2.16a03c1603fdfb6f0a83.png",
+    "static/media/hound_estado_1.png": "/houndexpressapp/static/media/hound_estado_1.94777ab87cebdc326753.png",
+    "index.html": "/houndexpressapp/index.html",
+    "static/media/satelite.svg": "/houndexpressapp/static/media/satelite.4bd85196fc8ed5e835cf667a472e11c9.svg",
+    "static/media/timeline.svg": "/houndexpressapp/static/media/timeline.31d789b1f6e3a5ad26c1c4d7da7573df.svg",
+    "static/media/phone.svg": "/houndexpressapp/static/media/phone.75fd0393b86f916801057561abee5eed.svg",
+    "static/media/list.svg": "/houndexpressapp/static/media/list.7c9423228fbf6e62597f89aced2e4508.svg",
+    "static/media/instagram.svg": "/houndexpressapp/static/media/instagram.5f42033966ca242e1495e6523ea19e93.svg",
+    "static/media/linkedin.svg": "/houndexpressapp/static/media/linkedin.07d60709229c6d237d47e06f80be4ed9.svg",
+    "static/media/mail.svg": "/houndexpressapp/static/media/mail.37df381d784a737305aba01a452a72c5.svg",
+    "static/media/menu.svg": "/houndexpressapp/static/media/menu.644fa295fdd5f662e642ba6bfb084239.svg",
+    "static/media/docs_add.svg": "/houndexpressapp/static/media/docs_add.683406b45cb3dd5f1572711156b79bce.svg",
+    "static/media/search.svg": "/houndexpressapp/static/media/search.be0f1b091abe3db3eb20407539704f89.svg",
+    "static/media/clock.svg": "/houndexpressapp/static/media/clock.52ac8140a49118d04178bf5b9a26152d.svg",
+    "static/media/facebook.svg": "/houndexpressapp/static/media/facebook.6282893d1e0b760832ca936d31303140.svg",
+    "static/media/start.svg": "/houndexpressapp/static/media/start.ae52fc72ea0d7fef00e77a07ef8cd5a6.svg",
+    "static/media/arrow_down.svg": "/houndexpressapp/static/media/arrow_down.d8ab9b46d605677b2d44c44457fa430c.svg",
+    "static/media/arrow_down_black.svg": "/houndexpressapp/static/media/arrow_down_black.522143ba833e69564f0364ebb229b883.svg",
+    "main.fb96c8ed.css.map": "/houndexpressapp/static/css/main.fb96c8ed.css.map",
+    "main.77764eab.js.map": "/houndexpressapp/static/js/main.77764eab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb96c8ed.css",
+    "static/js/main.77764eab.js"
+  ]
+}
