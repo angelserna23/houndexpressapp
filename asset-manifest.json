@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/houndexpressapp/static/css/main.fb96c8ed.css",
-    "main.js": "/houndexpressapp/static/js/main.77764eab.js",
+    "main.js": "/houndexpressapp/static/js/main.6c427740.js",
     "static/media/Hound-Express.mp4": "/houndexpressapp/static/media/Hound-Express.5e67a506d540f6a5cee9.mp4",
     "static/media/vision.png": "/houndexpressapp/static/media/vision.c47980182816e29cb845.png",
     "static/media/historia.png": "/houndexpressapp/static/media/historia.eeb81122b0ec90bd9f2b.png",
@@ -31,10 +31,10 @@
     "static/media/arrow_down.svg": "/houndexpressapp/static/media/arrow_down.d8ab9b46d605677b2d44c44457fa430c.svg",
     "static/media/arrow_down_black.svg": "/houndexpressapp/static/media/arrow_down_black.522143ba833e69564f0364ebb229b883.svg",
     "main.fb96c8ed.css.map": "/houndexpressapp/static/css/main.fb96c8ed.css.map",
-    "main.77764eab.js.map": "/houndexpressapp/static/js/main.77764eab.js.map"
+    "main.6c427740.js.map": "/houndexpressapp/static/js/main.6c427740.js.map"
   },
   "entrypoints": [
     "static/css/main.fb96c8ed.css",
-    "static/js/main.77764eab.js"
+    "static/js/main.6c427740.js"
   ]
 }
